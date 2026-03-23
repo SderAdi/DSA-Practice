@@ -1,0 +1,43 @@
+// Question: Union of Two Sorted Arrays
+// Approach: Two Pointer
+// Time Complexity: O(n1 + n2)
+// Space Complexity: O(1)
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr1[] = {1,2,3,4};
+    int arr2[] = {1,2,4,8,9};
+
+    int sz1 = sizeof(arr1)/sizeof(arr1[0]);
+    int sz2 = sizeof(arr2)/sizeof(arr2[0]);
+
+    int i = 0, j = 0;
+
+    while (i < sz1 && j < sz2) {
+        if (arr1[i] < arr2[j]){
+            cout << arr1[i] << " ";
+            i++;
+        }
+        else if (arr2[j] < arr1[i]){
+            cout << arr2[j] << " ";
+            j++;
+        }
+        else {
+            cout <<arr1[i] <<" ";
+            i++;
+            j++;
+        }
+    }
+    while (i < sz1){
+        cout << arr1[i] << " ";
+        i++;
+    }
+    while (j < sz2){
+        cout << arr2[j] << " ";
+        j++;
+    }
+
+    return 0;
+}
