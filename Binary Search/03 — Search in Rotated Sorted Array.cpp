@@ -1,3 +1,10 @@
+/* 
+    Core Logic (short)
+    Har step pe check karo:
+    Left half sorted hai ya Right half sorted hai
+    Phir decide karo target kis side me hai  
+*/
+
 
 #include <iostream>
 using namespace std;
